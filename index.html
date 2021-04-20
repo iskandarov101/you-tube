@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You Tube</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <button class="site-header__menu-btn"></button>
+      <a href="index.html" class="site-logo">
+        <img class="site-logo__img" src="img/logo.svg" alt="site-logo" width="116" height="25"  >
+      </a>
+    </div>
+
+    <div class="site-header__right-side">
+      <form action="https://htmlacademy.ru" class="site-header__form" method="POST">
+        <input class="site-header__input" placeholder="Search" name="search" type="search" >
+        <button class="site-header__search-icon"></button>
+      </form>
+
+      <div class="site-header__buttons">
+        <button class="site-header__video-btn"></button>
+        <button class="site-header__function-btn"></button>
+        <button class="site-header__notification-btn"></button>
+        <button class="site-header__user-btn"></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main active">
+    <div class="main__inner">
+      <div class="main_left-side left-side">
+        <button class="left-side__home-btn left-side__menu-btn">Home</button>
+        <button class="left-side__trending-btn left-side__menu-btn">Trending</button>
+        <button class="left-side__subscriptions-btn left-side__menu-btn">Subscriptions</button>
+        <button class="left-side__library-btn left-side__menu-btn">Library</button>
+        <button class="left-side__history-btn left-side__menu-btn">History</button>
+        <button class="left-side__watch-btn left-side__menu-btn">Watch later</button>
+        <button class="left-side__favourites-btn left-side__menu-btn">Favourites</button>
+        <button class="left-side__liked-btn left-side__menu-btn">Liked videos</button>
+        <button class="left-side__music-btn left-side__menu-btn">Music</button>
+        <button class="left-side__games-btn left-side__menu-btn">Games</button>
+        <button class="left-side__collapse-btn left-side__menu-btn">Show more</button>
+
+        <h4 class="left-side__subscriptions-title">Subscriptions</h4>
+        <button class="left-side__subscribed left-side__subscriptions js-gussie" >Gussie Singleton</button>
+        <button class="left-side__subscribed left-side__subscriptions js-nora" >Nora Francis</button>
+        <button class="left-side__subscribed left-side__subscriptions js-belle" >Belle Briggs</button>
+        <button class="left-side__subscribed left-side__subscriptions js-eunice" >Eunice Cortez</button>
+
+        <button class="left-side__settings-btn">Settings</button>
+      </div>
+
+
+      <div class="main__right-side right-side">
+        <div class="first-line">
+          <div class="first-line__inner">
+            <a href="#" class="first-line__user"></a>
+            <div class="first-line__slider-controllers">
+              <button class="first-line__slider-controller-left slider-btn"></button>
+              <button class="first-line__slider-controller-right slider-btn"></button>
+            </div>  
+          </div>
+
+          <ul class="video js-video">
+            
+          </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <template class="first-line__template">
+    <li class="video__item">
+      <button class="video__add" type="button"></button>
+      <a href="#" class="video__link">
+        <div class="video__inner">
+          <img src="" width="250" height="150" alt="rasm" class="video__img">
+          <span class="video__duration"></span>
+        </div>
+        <h4 class="video__title"></h4>
+        <div class="video-info">
+          <span class="video__news"></span>
+          <span class="video__time  "></span>
+          <span class="video__author"></span>
+        </div>
+      </a>
+    </li>
+  </template>
+
+
+
+  
+  <script src="js/app.js"></script>
+</body>
+</html>

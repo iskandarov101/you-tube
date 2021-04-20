@@ -1,0 +1,78 @@
+// Ro'yxatdagi stillarni olib tashlash
+
+@mixin reset-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+@mixin btn {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  outline: none;
+  cursor: pointer;
+  transition: background-color .2s ease;
+  transition: box-shadow .2s ease;
+
+  &:active {
+    background-color: #eee;
+  }
+
+  &:focus {
+    box-shadow: 0 0 2px 2px #eee;
+    background-color: #eee;
+  }
+}
+
+
+// Psevdoelementdagi uchburchak
+
+@mixin triangle ($direction, $size: 15px, $color: black) {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  content: "";
+
+  @if $direction == "up" {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+  } @else if $direction == "down" {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+  } @else if $direction == "left" {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+  } @else if $direction == "right" {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+  }
+}
+
+
+// Media so'rovlar uchun mixin
+
+@mixin breakpoint-down ($screen-width) {
+  @media only screen and (max-width: $screen-width) {
+    @content;
+  }
+}
+
+@mixin breakpoint-up ($screen-width) {
+  @media only screen and (min-width: $screen-width) {
+    @content;
+  }
+}
+
+@mixin breakpoint-between ($min-screen, $max-screen) {
+  @media only screen and (min-width: $min-screen) and (max-width: $max-screen) {
+    @content;
+  }
+}
